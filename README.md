@@ -70,15 +70,50 @@ Objective completed! Last but not least, the final objective.
 
 ## Bulk Add Group Members
 
-The next objective is to revoke access to a user. I went to Edward Von's profile and then at the top of the page, I clicked `Revoke sessions` which will then log them out of their account. 
+For the last objective, we need to bulk add members to a group. In order to do that, we need to navigate to the `Groups` tab in Entra ID. 
 
-![Image](EntraID9.png)
+![Image](EntraIDBulk14.png)
 
-That pretty much completes that revocation process. There's another step when you can disable the account I believe but not delete it. For now, the revoke sessions is enough. 
+Once there, we have to create a security group first and then a normal group. I later found out we only needed the security group and we could've added the users to the security group but that's fine for now. So click on `New Group` at the top of the Group page. 
 
-On to the last objective.
+![Image](EntraIDBulk15.png)
+
+Once here, choose `Security` for the Group Type. Click through the rest of the options and save. 
+
+![Image](EntraIDBulk16.png)
+
+After the security group, I created a Microsoft 365 group called `Big Ballers` in which I'll store my bulk users. 
+
+![Image](EntraIDBulk17.png)
+
+Here are the two newly created Entra ID Groups:
+
+![Image](EntraIDBulk18.png)
+
+Now, we have to add the users to the group. I clicked on the Big Ballers group, went to the Members tab on the left, and then chose Bulk operations > Import members
+
+![Image](EntraIDBulk19.png)
+
+To bulk add members to a group, you'll be forced to download a new Excel sheet. This sheet will ask for the principal or user name when you can just copy from the Entra ID Users page. 
+
+![Image](EntraIDBulk20.png)
+
+I copied and pasted the emails into the document:
+
+![Image](EntraIDBulk21.png)
+
+Once all the emails were added, I uploaded the document to the portal and received a `Succeeded` notification alerting me that the bulk invite operation was successful.
+
+![Image](EntraIDBulk22.png)
+
+You can doublecheck your results by going to the `Members` tab in the selected group (in our case, Big Ballers) and all the members in the Excel spreadsheet should be listed in the group now. 
+
+![Image](EntraIDBulk23.png)
+
+
+Lab completed!
 
 
 ## Personal Notes
 
-This was an easy lab and it only took 10 minutes. This is one of those things that may just be easier to finish in the Portal instead of automating it. 
+Another easy lab. The hardest part was figuring out why the first spreadsheet upload failed. This is a reminder to never just copy and paste. Actually observe what's already present in the system. 
